@@ -1,4 +1,4 @@
-# Employee Onboarding Flowchart
+# Employee Onboarding Chart
 
 This chart shows the process of onboarding a new employee in a company.
 
