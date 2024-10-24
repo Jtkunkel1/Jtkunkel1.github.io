@@ -5,96 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telescope Research Project</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset some browser defaults */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #283593;
-            color: white;
+            background-color: #1b2735;
+            color: #fff;
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 3rem;
+            letter-spacing: 1px;
+            font-weight: 300;
         }
 
         nav {
-            text-align: center;
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #333;
         }
 
         nav a {
             text-decoration: none;
-            color: #283593;
+            color: #fff;
             padding: 10px 20px;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            margin: 0 10px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 25px;
         }
 
         nav a:hover {
-            background-color: #ddd;
+            background-color: #1b2735;
+            color: #e3f2fd;
         }
 
         .container {
             display: flex;
             flex-wrap: wrap;
-            margin: 20px auto;
             max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         .content {
-            flex: 2;
-            margin-right: 20px;
+            flex: 3;
+            padding-right: 20px;
         }
 
         .content h2 {
-            color: #283593;
-            margin-bottom: 10px;
+            color: #1b2735;
+            margin-bottom: 15px;
+            font-size: 2rem;
         }
 
         .content p {
-            text-align: justify;
-            line-height: 1.6;
             margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .sidebar {
             flex: 1;
-            background-color: #f9f9f9;
+            background-color: #f9fafb;
             padding: 20px;
+            border-radius: 15px;
             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
         }
 
         .sidebar img {
             width: 100%;
             margin-bottom: 20px;
-            border-radius: 5px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sidebar img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
 
         footer {
-            background-color: #283593;
-            color: white;
+            background-color: #1b2735;
+            color: #fff;
             text-align: center;
             padding: 15px 0;
+            margin-top: 30px;
             position: relative;
             bottom: 0;
             width: 100%;
+            font-size: 0.9rem;
         }
 
         footer p {
             margin: 0;
-            font-size: 1em;
+            letter-spacing: 0.5px;
+        }
+
+        /* Add a smooth scroll effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .content {
+                padding-right: 0;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -109,25 +156,25 @@
     <a href="#types">Types of Telescopes</a>
     <a href="#history">History</a>
     <a href="#technology">Modern Technology</a>
-    <a href="#future">Future of Telescopes</a>
+    <a href="#future">Future</a>
 </nav>
 
 <div class="container">
     <div class="content">
         <h2 id="overview">Overview</h2>
-        <p>Telescope technology has revolutionized our understanding of the universe. From observing distant stars to capturing images of planets, telescopes have helped scientists explore the farthest reaches of space. In this research project, we dive into the mechanics, types, and innovations of telescopes that have shaped modern astronomy.</p>
+        <p>The development of telescopes has significantly enhanced our understanding of the universe. This research project delves into the mechanics, types, and innovations that have shaped the field of modern astronomy. From early refracting telescopes to cutting-edge space observatories, we explore the evolution of this essential scientific tool.</p>
         
         <h2 id="types">Types of Telescopes</h2>
-        <p>There are various types of telescopes, each designed to observe the cosmos in different wavelengths of light. Some of the most common types include refracting telescopes, reflecting telescopes, and radio telescopes. Each type has unique strengths and applications in both amateur astronomy and professional research.</p>
+        <p>There are several types of telescopes, each suited for different astronomical tasks. Refracting telescopes use lenses to focus light, while reflecting telescopes use mirrors. More advanced tools like radio telescopes and space telescopes capture a wide range of wavelengths beyond visible light.</p>
         
         <h2 id="history">History of Telescopes</h2>
-        <p>The invention of the telescope in the early 17th century by Hans Lippershey changed the way we perceive the night sky. Over the centuries, telescopic technology advanced rapidly, from Galileo's simple lens-based design to the modern space telescopes like Hubble, which capture awe-inspiring images of the cosmos.</p>
+        <p>Since the early 1600s, the telescope has evolved from a simple spyglass into a highly sophisticated scientific instrument. Notable advancements include Galileo's first telescope, Isaac Newton's reflecting telescope, and the iconic Hubble Space Telescope.</p>
         
         <h2 id="technology">Modern Technology</h2>
-        <p>Today's telescopes employ cutting-edge technology, including adaptive optics, space-based observatories, and radio wave detection. These innovations have led to unprecedented discoveries about black holes, exoplanets, and the early universe. The latest telescopes can see farther and more clearly than ever before.</p>
+        <p>Modern telescopes are equipped with advanced optics, adaptive optics systems to correct atmospheric distortions, and digital sensors that capture stunning images. These tools allow astronomers to detect faint, distant objects in deep space and study phenomena such as black holes and exoplanets.</p>
         
         <h2 id="future">Future of Telescopes</h2>
-        <p>The future of telescopes promises even more profound breakthroughs, as we continue to build larger and more advanced observatories, both on Earth and in space. Projects like the James Webb Space Telescope and future radio arrays will push the boundaries of what we can see and understand about the universe.</p>
+        <p>The next generation of telescopes, including the James Webb Space Telescope, promises to uncover even more secrets of the universe. These telescopes will offer unprecedented resolution and allow scientists to peer into the farthest reaches of space, potentially discovering new exoplanets and stars.</p>
     </div>
 
     <div class="sidebar">
